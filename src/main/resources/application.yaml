@@ -1,8 +1,8 @@
 
 app:
   token:
-    secret: SOME_RANDOM_SECRET_FOR_SIGNING_JWT
-    issuer: SOME_NAME_FOR_ISSER_JWT
+    secret: secretcode
+    issuer: com.festuskerich
     expires-minute: 5
 spring:
   r2dbc:
