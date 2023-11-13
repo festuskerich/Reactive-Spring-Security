@@ -1,0 +1,27 @@
+
+app:
+  token:
+    secret: SOME_RANDOM_SECRET_FOR_SIGNING_JWT
+    issuer: SOME_NAME_FOR_ISSER_JWT
+    expires-minute: 5
+spring:
+  r2dbc:
+    username: root
+    password: Coder_1234
+    url: r2dbc:mysql://localhost:3306/reactive_auth
+    pool:
+      initial-size: 1
+      max-size: 10
+      max-idle-time: 30m
+  flyway:
+    enabled: true
+    baselineOnMigrate: true
+    locations: classpath:db/migration
+    url: jdbc:mysql://localhost:3306/reactive_auth
+    user: root
+    password: Coder_1234
+    driverClassName: com.mysql.cj.jdbc.Driver
+logging:
+  level:
+    root: debug
+ 
